@@ -1,6 +1,9 @@
 <?php
 
 namespace SmallPHP;
+
+use SmallPHP\Components\footer;
+
 	//require('Database/db.php');
 
 	include_once "vendor/autoload.php";
