@@ -2,6 +2,8 @@
 
 namespace SmallPHP;
 	//require('Database/db.php');
+
+	include_once "vendor/autoload.php";
 	include_once 'Components/header.php';
 	//Check if a user is logged in or not
 	session_start();
