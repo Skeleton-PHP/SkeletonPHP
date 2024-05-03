@@ -1,6 +1,6 @@
 <?php
-	//require('db.php');
-	include 'header.php';
+	//require('Database/db.php');
+	include 'Components/header.php';
 	//Check if a user is logged in or not
 	session_start();
 		if (isset($_SESSION['username'])){
@@ -93,7 +93,7 @@
 
 		
 		<footer class="container">
-		   <?php include 'footer.php'; ?>
+		   <?php include 'Components/footer.php'; ?>
 		</footer>
 	  
 	</body>
