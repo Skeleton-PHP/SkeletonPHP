@@ -31,6 +31,7 @@
 	 
 	}else{
 	//When the user visits the page first time, simple login form will be displayed.
+	}
 	?>
 	<html>
 	<head>
@@ -58,4 +59,4 @@
 	</body>
 
 	</html>
-	<?php } ?>
+	
