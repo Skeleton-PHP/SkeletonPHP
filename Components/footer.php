@@ -1,25 +1,8 @@
 <?php
 namespace SmallPHP\Components;
 
-Class Footer{
-
-
-private $name;
-
-public function __construct()
-{
-echo "Hello";
-}
-
-
-
-
-}
-
-
-
-
 ?>
+
 <div id="footer"> 	&copy;2017</div>
 		<!-- jQuery library -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" 

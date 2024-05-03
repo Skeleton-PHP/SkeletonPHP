@@ -95,7 +95,7 @@ namespace SmallPHP;
 		</section>
 		<footer class="container">
 		   <?php
-		 include_once 'Components/footer.php'; ?>
+		 include_once "Components/footer.php"; ?>
 		</footer>
 	</body>
 	</html>

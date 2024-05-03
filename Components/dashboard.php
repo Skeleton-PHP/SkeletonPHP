@@ -2,9 +2,9 @@
 
 namespace SmallPHP\Components;
 
-	require('Database/db.php');
-	include_once("Users/auth.php");
-	include_once("Components/header.php");
+	require_once "Database/db.php";
+	include_once "Users/auth.php";
+	include_once "Components/header.php";
 	?>
 	<!DOCTYPE html>
 	<html>
