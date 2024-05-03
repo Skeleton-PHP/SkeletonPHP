@@ -1,0 +1,18 @@
+{
+    "name": "vertanzil/small-php",
+    "description": "Small php based framework for building websites",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vertanzil\\SmallPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kyle Smith",
+            "email": "73062855+vertanzil@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
