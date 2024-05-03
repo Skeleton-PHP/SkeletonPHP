@@ -1,6 +1,8 @@
 <?php
+
+namespace SmallPHP;
 	//require('Database/db.php');
-	include 'Components/header.php';
+	include_once 'Components/header.php';
 	//Check if a user is logged in or not
 	session_start();
 		if (isset($_SESSION['username'])){
@@ -17,13 +19,17 @@
 				echo '<center><div>New user? Please <a href="login.php">Login</a> or <a href="register.php">Register</a>
 				</div></center>';
 		}
-	?> 
-	<html>
+	?>
+	<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+<title>Some relevant title</title>
+</head>
 	<body>
-		<header> 
+		<header>
 			<div class="container">
 				<h3>About This Project</h3>
-			
 		<?php
 		//If the user is logged-in
 		if (isset($_SESSION['username'])){
@@ -43,7 +49,7 @@
 		<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="index.php">
-						<span class="glyphicon glyphicon-home"></span> 
+						<span class="glyphicon glyphicon-home"></span>
 						Home</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li><a href="dashboard.php"> Dashboard</a></li>
@@ -77,8 +83,7 @@
 					glyphicon-user"></span> Register</a></li>';
 
 		}
-		
-	?>       
+	?>
 			</div>
 		</header>
 		<section class="container" >
@@ -87,14 +92,10 @@
 					 <p class="text-justify">This is an educational open-source project. It is a dynamic website, built from scratch using PHP and MySQL. The main functionality of the website is to allow users to register and log in. When a user registers, the data is stored in the database. When a user tries to log in, the database is checked. In case of a match, the user logs in. The data of the website changes when a user is logged in. That is why this is a dynamic website. The website uses some very basic styling from Bootstrap. Bootstrap is a CSS and JavaScript framework for developing responsive, mobile first websites.</p>
 				</div>
 			</div>
-			
 		</section>
-		
-
-		
 		<footer class="container">
-		   <?php include 'Components/footer.php'; ?>
+		   <?php
+		 include_once 'Components/footer.php'; ?>
 		</footer>
-	  
 	</body>
 	</html>

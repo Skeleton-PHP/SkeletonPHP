@@ -1,7 +1,10 @@
 <?php
-	require('db.php');
-	include("auth.php");
-	include("header.php");
+
+namespace SmallPHP\Components;
+
+	require('Database/db.php');
+	include_once("Users/auth.php");
+	include_once("Components/header.php");
 	?>
 	<!DOCTYPE html>
 	<html>
@@ -20,3 +23,4 @@
 	</div>
 	</body>
 	</html>
+	
