@@ -1,8 +1,9 @@
 <?php
 namespace SmallPHP\classes;
 
+$config = new Config();
 
-	$servername = Config::setting;
+	$servername =$config->
 	$username = "root";
 	$password = "";
 	$dbname = "DB_1";

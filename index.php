@@ -100,7 +100,12 @@ use SmallPHP\Components\footer;
 		</section>
 		<footer class="container">
 		   <?php
-		 include_once "Components/footer.php"; ?>
+			use SmallPHP\classes\Config;
+
+			$conf = new Config();
+
+			echo $conf->getPassword();
+		?>
 		</footer>
 	</body>
 	</html>

@@ -1,11 +1,11 @@
 {
     "name": "vertanzil/smallphp",
-    "description": "Small php based framework for building websites",
+    "description": "Small php based framework",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Vertanzil\\SmallPhp\\": "src/"
+            "SmallPHP\\": "/"
         }
     },
     "authors": [
@@ -14,5 +14,6 @@
             "email": "73062855+vertanzil@users.noreply.github.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }

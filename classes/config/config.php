@@ -8,7 +8,7 @@ use RecursiveIteratorIterator;
 
 /**
  * Interface ConfigStub
- * @package App\classes
+ * @package SmallPHP\classes
  */
 interface ConfigStub
 {
@@ -25,12 +25,12 @@ interface ConfigStub
 
 /**
  * Interface ConfigStub
- * @package App\classes
+ * @package SmallPHP\classes
  */
 
 /**
  * Class Config
- * @package App\classes
+ * @package SmallPHP\classes
  */
 class Config implements ConfigStub
 {
