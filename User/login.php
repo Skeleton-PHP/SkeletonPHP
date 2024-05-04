@@ -33,8 +33,7 @@ if (isset($_SESSION['username'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 	<title>User Login Using PHP & MySQL</title>
 	<meta name="robots" content="noindex" />
