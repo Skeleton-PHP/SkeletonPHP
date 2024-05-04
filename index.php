@@ -76,13 +76,13 @@ namespace SmallPHP;
 			<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a href="index.php">
-							<span class="glyphicon glyphicon-home"></span> 
+							<span class="glyphicon glyphicon-home"></span>
 							Home</a></li>
 						<li><a href="#contact">Contact</a></li>
 
 			<li><a href="login.php"><span class="glyphicon 
 					glyphicon-log-in"></span> Login</a></li>
-					<li><a href="register.php"><span class="glyphicon 
+					<li><a href="register.php"><span class="glyphicon
 					glyphicon-user"></span> Register</a></li>';
 
 		}
