@@ -1,12 +1,9 @@
 <?php
 
 namespace SmallPHP;
-
 	//require('Database/db.php');
-
 	include_once "vendor/autoload.php";
 	include_once 'Components/header.php';
-	//Check if a user is logged in or not
 	session_start();
 		if (isset($_SESSION['username'])){
 		$username = $_SESSION['username'];
@@ -80,7 +77,7 @@ namespace SmallPHP;
 							Home</a></li>
 						<li><a href="#contact">Contact</a></li>
 
-			<li><a href="login.php"><span class="glyphicon 
+			<li><a href="login.php"><span class="glyphicon
 					glyphicon-log-in"></span> Login</a></li>
 					<li><a href="register.php"><span class="glyphicon
 					glyphicon-user"></span> Register</a></li>';
