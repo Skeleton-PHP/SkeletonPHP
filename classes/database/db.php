@@ -1,5 +1,7 @@
 <?php
+
 namespace SmallPHP\classes;
+
 use SmallPHP\classes;
 use SmallPHP\classes\Config\Config;
 
