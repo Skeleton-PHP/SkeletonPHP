@@ -1,8 +1,8 @@
 <?php
 
 namespace SmallPHP;
+use SmallPHP\AutoLoader;
 	//require('Database/db.php');
-	include_once "vendor/autoload.php";
 	include_once 'Components/header.php';
 	session_start();
 		if (isset($_SESSION['username'])){
