@@ -22,7 +22,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <html>
 
 <head>
-	<?php include 'header.php'; ?>
+	<?php include_once 'header.php'; ?>
 	<meta name="robots" content="noindex" />
 </head>
 

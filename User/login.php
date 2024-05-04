@@ -2,10 +2,10 @@
 include_once 'header.php';
 //Start the Session
 session_start();
-require 'Database/db.php';
+require_once 'Database/db.php';
 //If the form is submitted or not.
 //If the form is submitted
-if (isset($_POST['username']) and isset($_POST['password'])) {
+if (isset($_POST['username']) && isset($_POST['password'])) {
 	//Assigning posted values to variables.
 	$username = $_POST['username'];
 	$password = $_POST['password'];
