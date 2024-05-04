@@ -2,13 +2,8 @@
 
 namespace SmallPHP\Components;
 use SmallPHP\Database\Connection;
+use SmallPHP\Users\Authentication;
 
-
-
-
-
-
-include_once "Users/auth.php";
 include_once "Components/header.php";
 ?>
 <!DOCTYPE html>

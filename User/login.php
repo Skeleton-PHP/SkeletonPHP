@@ -1,8 +1,11 @@
 <?php
+
+use SmallPHP\Database\Connection;
+
+
 include_once 'header.php';
 //Start the Session
 session_start();
-require_once 'Database/db.php';
 //If the form is submitted or not.
 //If the form is submitted
 if (isset($_POST['username']) && isset($_POST['password'])) {

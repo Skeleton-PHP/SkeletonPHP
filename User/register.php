@@ -1,5 +1,6 @@
 <?php
-require_once 'Database/db.php';
+use SmallPHP\Database\Connection;
+
 // If the values are posted, insert them into the database.
 if (isset($_POST['username']) && isset($_POST['password'])) {
 	$username = $_POST['username'];
