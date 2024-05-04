@@ -20,7 +20,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<?php include_once 'header.php'; ?>
