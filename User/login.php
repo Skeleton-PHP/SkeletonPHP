@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include_once 'header.php';
 //Start the Session
 session_start();
 require 'Database/db.php';

@@ -1,11 +1,7 @@
 <?php
-
 namespace SmallPHP\classes\Config;
-
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
-
-
 /**
  * Interface ConfigStub
  * @package SmallPHP\classes
@@ -13,27 +9,16 @@ use RecursiveIteratorIterator;
 interface ConfigStub
 {
     public function getHost();
-
     public function getUsername();
-
     public function getDatabase();
-
     public function getPassword();
-
     public function getTable();
 }
-
-/**
- * Interface ConfigStub
- * @package SmallPHP\classes
- */
-
 /**
  * Class Config
  * @package SmallPHP\classes
  */
-class Config implements ConfigStub
-{
+class Config implements ConfigStub{
     /**
      * @return mixed|null
      */
@@ -65,7 +50,6 @@ class Config implements ConfigStub
         }
         return null;
     }
-
     /**
      * @return mixed|null
      */
