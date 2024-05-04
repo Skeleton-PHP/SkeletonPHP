@@ -7,7 +7,7 @@ include_once "Users/auth.php";
 include_once "Components/header.php";
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
