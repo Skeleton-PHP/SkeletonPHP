@@ -1,5 +1,5 @@
 <?php
-Namespace SmallPHP\Users\Authentication;
+namespace SmallPHP\Users\Authentication;
 session_start();
 if (!isset($_SESSION['username'])) {
 	header("Location:login.php");
