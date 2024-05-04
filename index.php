@@ -22,7 +22,7 @@ namespace SmallPHP;
 	?>
 	<!DOCTYPE html>
 <html lang="en">
-	
+
 	<head>
 <title>Some relevant title</title>
 </head>
@@ -100,4 +100,3 @@ namespace SmallPHP;
 		</footer>
 	</body>
 	</html>
-
