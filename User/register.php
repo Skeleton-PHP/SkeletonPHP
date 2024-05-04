@@ -25,6 +25,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <head>
 	<?php include_once 'header.php'; ?>
 	<meta name="robots" content="noindex" />
+	<title>Register</title>
 </head>
 
 <body>
