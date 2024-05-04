@@ -1,8 +1,13 @@
 <?php
 
 namespace SmallPHP\Components;
+use SmallPHP\Database\Connection;
 
-require_once "Database/db.php";
+
+
+
+
+
 include_once "Users/auth.php";
 include_once "Components/header.php";
 ?>

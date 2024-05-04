@@ -1,6 +1,6 @@
 <?php
 
-namespace SmallPHP\classes;
+namespace SmallPHP\Database\Connection;
 
 use SmallPHP\classes;
 use SmallPHP\classes\Config\Config;
