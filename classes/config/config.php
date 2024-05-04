@@ -1,6 +1,6 @@
 <?php
 
-namespace SmallPHP\classes;
+namespace SmallPHP\classes\Config;
 
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;

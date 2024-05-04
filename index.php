@@ -2,8 +2,6 @@
 
 namespace SmallPHP;
 
-use SmallPHP\Components\footer;
-
 	//require('Database/db.php');
 
 	include_once "vendor/autoload.php";
@@ -100,12 +98,9 @@ use SmallPHP\Components\footer;
 		</section>
 		<footer class="container">
 		   <?php
-			use SmallPHP\classes\Config;
 
-			$conf = new Config();
-
-			echo $conf->getPassword();
 		?>
 		</footer>
 	</body>
 	</html>
+
