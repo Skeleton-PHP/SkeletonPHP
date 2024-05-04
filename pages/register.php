@@ -1,19 +1,18 @@
 <?php
 use SmallPHP\Database\Connection;
-
 // If the values are posted, insert them into the database.
 if (isset($_POST['username']) && isset($_POST['password'])) {
-	$username = $_POST['username'];
-	$email = $_POST['email'];
-	$password = $_POST['password'];
+	$username = htmlspecialchars($_POST['username']);
+	$email = htmlspecialchars($_POST['email']);
+	$password = htmlspecialchars($_POST['password']);
 
-	$sql = "INSERT INTO user (username, password, email)
-	VALUES ('$username', '$password', '$email')";
+	$sql = htmlspecialchars("INSERT INTO user (username, password, email)
+	VALUES ('$username', '$password', '$email')");
 
 	if (mysqli_query($conn, $sql)) {
 		echo "<center><h3>New record created successfully!<br/>Click here to <a href='login.php'>Login</a></h3></center>";
 	} else {
-		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+		echo "Error: " . htmlspecialchars($sql) . "<br>" . mysqli_error($conn);
 	}
 
 	mysqli_close($conn);
