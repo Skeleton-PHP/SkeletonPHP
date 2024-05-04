@@ -50,7 +50,7 @@ class Config implements ConfigStub
     public function retrieveSetting($fetch)
     {
         if (!file_exists("config.json")) {
-            ##header("Location: index.php?url=Error&Result=ConfigFileMissing");
+            die("Error");"
             exit;
         } else {
             $string = file_get_contents('config.json');
