@@ -1,9 +1,9 @@
 <?php
 
-namespace SmallPHP\Database\Connection;
+namespace SkeletonPHP\Database\Connection;
 
-use SmallPHP\classes;
-use SmallPHP\classes\Config\Config;
+use SkeletonPHP\classes;
+use SkeletonPHP\classes\Config\Config;
 
 $config = new Config();
 $servername = $conf->getHost();

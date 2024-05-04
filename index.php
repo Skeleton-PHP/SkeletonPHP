@@ -1,7 +1,7 @@
 <?php
 
-namespace SmallPHP;
-use SmallPHP\AutoLoader;
+namespace SkeletonPHP;
+use SkeletonPHP\AutoLoader;
 	//require('Database/db.php');
 	include_once 'Components/header.php';
 	session_start();

@@ -1,6 +1,6 @@
 <?php
 
-use SmallPHP\Database\Connection;
+use SkeletonPHP\Database\Connection;
 
 
 include_once 'header.php';

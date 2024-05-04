@@ -1,5 +1,5 @@
 <?php
-use SmallPHP\Database\Connection;
+use SkeletonPHP\Database\Connection;
 // If the values are posted, insert them into the database.
 if (isset($_POST['username']) && isset($_POST['password'])) {
 	$username = htmlspecialchars($_POST['username']);

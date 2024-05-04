@@ -1,11 +1,11 @@
 {
-    "name": "vertanzil/smallphp",
+    "name": "vertanzil/skeletonphp",
     "description": "Small php based framework",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SmallPHP\\": "./"
+            "SkeletonPHP\\": "./"
         }
     },
     "authors": [

@@ -1,8 +1,8 @@
 <?php
 
-namespace SmallPHP\Components;
-use SmallPHP\Database\Connection;
-use SmallPHP\Users\Authentication;
+namespace SkeletonPHP\Components;
+use SkeletonPHP\Database\Connection;
+use SkeletonPHP\Users\Authentication;
 
 include_once "Components/header.php";
 ?>

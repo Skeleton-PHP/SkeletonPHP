@@ -1,5 +1,5 @@
 <?php
-namespace SmallPHP\Components\Footer;
+namespace SkeletonPHP\Components\Footer;
 ?>
 
 <div id="footer"> &copy;2017</div>

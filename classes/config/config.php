@@ -1,5 +1,5 @@
 <?php
-namespace SmallPHP\classes\Config;
+namespace SkeletonPHP\classes\Config;
 use RecursiveArrayIterator;
 use RecursiveIteratorIterator;
 /**
