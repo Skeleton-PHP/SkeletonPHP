@@ -2,7 +2,7 @@
 	include 'header.php';
 	//Start the Session
 	session_start();
-	require('Database/db.php');
+	require 'Database/db.php';
 	//If the form is submitted or not.
 	//If the form is submitted
 	if (isset($_POST['username']) and isset($_POST['password'])){
