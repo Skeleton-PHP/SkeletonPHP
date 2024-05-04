@@ -32,6 +32,7 @@ if (isset($_SESSION['username'])) {
 	//When the user visits the page first time, simple login form will be displayed.
 }
 ?>
+<!DOCTYPE html>
 <html>
 
 <head>

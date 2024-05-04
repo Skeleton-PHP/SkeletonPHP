@@ -19,6 +19,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 }
 
 ?>
+<!DOCTYPE html>
 <html>
 
 <head>
