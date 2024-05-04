@@ -3,7 +3,7 @@
 namespace SkeletonPHP;
 use SkeletonPHP\AutoLoader;
 	//require('Database/db.php');
-	include_once 'Components/header.php';
+	include_once 'templates/header.php';
 	session_start();
 		if (isset($_SESSION['username'])){
 		$username = $_SESSION['username'];
@@ -95,6 +95,7 @@ use SkeletonPHP\AutoLoader;
 		</section>
 		<footer class="container">
 		   <?php
+			use SkeletonPHP\Components\Footer;
 
 		?>
 		</footer>
