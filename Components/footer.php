@@ -1,3 +1,7 @@
+<?php
+namespace SmallPHP\Components\Footer;
+?>
+
 <div id="footer"> &copy;2017</div>
 <!-- jQuery library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
