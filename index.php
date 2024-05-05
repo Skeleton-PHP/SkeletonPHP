@@ -81,7 +81,6 @@ use SkeletonPHP\AutoLoader;
 					glyphicon-log-in"></span> Login</a></li>
 					<li><a href="register.php"><span class="glyphicon
 					glyphicon-user"></span> Register</a></li>';
-
 		}
 	?>
 			</div>
