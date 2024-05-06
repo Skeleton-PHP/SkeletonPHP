@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 	$password = $_POST['password'];
 	//Checking the values are existing in the database or not
 	$query = (new QueryBuilder()) ->select('*') ->from('user')->where($username)->where($password);
-	$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+	$result = mysqli_query($conn, htmlspecialchars($query)) or die(mysqli_error($conn));
 	$count = mysqli_num_rows($result);
 	//If the posted values are equal to the database values, then session will be created for the user.
 	if ($count == 1) {
