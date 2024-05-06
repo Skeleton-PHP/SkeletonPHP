@@ -1,7 +1,8 @@
 <?php
 
 use SkeletonPHP\Database\Connection;
-
+use QueryBuilder\QueryBuilder;
+use QueryBuilder\Select;
 
 include_once 'header.php';
 //Start the Session
@@ -13,8 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	//Checking the values are existing in the database or not
-	$query = "SELECT * FROM user WHERE username='$username' and password='$password'";
-
+	$query = (new QueryBuilder()) ->select('*') ->from('user')->where($username)->where($password);
 	$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 	$count = mysqli_num_rows($result);
 	//If the posted values are equal to the database values, then session will be created for the user.

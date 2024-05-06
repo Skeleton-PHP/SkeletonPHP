@@ -4,12 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "394ae5f25278a4fca15a39c415f27551",
-    "packages": [],
+    "content-hash": "888b9daf0f3a6c0988a26f2ade85c767",
+    "packages": [
+        {
+            "name": "vertanzil/sql-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vertanzil/SQLBuilder.git",
+                "reference": "e184146147ee38cd0e2ca85a9fc39e64a54abdb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vertanzil/SQLBuilder/zipball/e184146147ee38cd0e2ca85a9fc39e64a54abdb7",
+                "reference": "e184146147ee38cd0e2ca85a9fc39e64a54abdb7",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "component",
+            "autoload": {
+                "psr-4": {
+                    "Vertanzil\\SqlBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Smith",
+                    "email": "73062855+vertanzil@users.noreply.github.com"
+                }
+            ],
+            "description": "SQL builder for php",
+            "support": {
+                "issues": "https://github.com/vertanzil/SQLBuilder/issues",
+                "source": "https://github.com/vertanzil/SQLBuilder/tree/master"
+            },
+            "time": "2024-05-05T07:07:57+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "vertanzil/sql-builder": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
