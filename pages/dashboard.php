@@ -24,5 +24,4 @@ include_once "Components/header.php";
 		<a href="logout.php">Logout</a>
 	</div>
 </body>
-
 </html>
