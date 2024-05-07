@@ -1,4 +1,4 @@
-<?php class_exists('SkeletonPHP\Templates\Template') or exit; ?>
+<?php class_exists('SkeletonPHP\Templates\Template') || exit; ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
