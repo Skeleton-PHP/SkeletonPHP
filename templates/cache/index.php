@@ -1,6 +1,6 @@
-<?php class_exists('SkeletonPHP\Templates\Template') or exit; ?>
+<?php class_exists('SkeletonPHP\Templates\Template') || exit; ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
         <meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />

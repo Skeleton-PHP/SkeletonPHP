@@ -36,6 +36,7 @@ if (isset($_SESSION['username'])) {
 </head>
 
 <body>
+
 	<header>
 		<div class="container">
 			<h3>About This Project</h3>
@@ -94,6 +95,7 @@ if (isset($_SESSION['username'])) {
 			?>
 		</div>
 	</header>
+
 	<section class="container">
 		<div class="row">
 			<div class="col-md-9 content">
@@ -101,8 +103,8 @@ if (isset($_SESSION['username'])) {
 			</div>
 		</div>
 	</section>
-	<footer class="container">
 
+	<footer class="container">
 		<div id="footer"> &copy;2017</div>
 		<!-- jQuery library -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -110,8 +112,8 @@ if (isset($_SESSION['username'])) {
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		</div>
-
 	</footer>
+
 </body>
 
 </html>
