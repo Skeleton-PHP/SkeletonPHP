@@ -4,7 +4,7 @@ class Template {
 
 	static $blocks = array();
 	static $cache_path = 'cache/';
-	static $cache_enabled = FALSE;
+	static $cache_enabled = false;
 
 	static function view($file, $data = array()) {
 		$cached_file = self::cache($file);
@@ -85,4 +85,3 @@ class Template {
 	}
 
 }
-?>
