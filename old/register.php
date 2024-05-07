@@ -1,4 +1,4 @@
-<?php
+
 use SkeletonPHP\Database\Connection;
 use QueryBuilder\QueryBuilder;
 use QueryBuilder\Insert;

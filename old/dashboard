@@ -1,4 +1,4 @@
-<?php
+
 
 namespace SkeletonPHP\Components;
 use SkeletonPHP\Database\Connection;

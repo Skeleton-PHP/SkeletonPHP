@@ -1,5 +1,6 @@
+<?php class_exists('SkeletonPHP\Templates\Template') or exit; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
         <meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -13,10 +14,13 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="style.css">
-		<title>{% yield title %}</title>
+		<title>Home Page</title>
 	</head>
 	<body>
-    {% yield content %}
+    
+<h1>Home</h1>
+<p>Welcome to the home page!</p>
+
 
 	<div id="footer"> &copy;2017</div>
 	<!-- jQuery library -->
@@ -28,3 +32,6 @@
 
     </body>
 </html>
+
+
+
