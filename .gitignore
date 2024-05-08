@@ -1,2 +1,5 @@
 /vendor/
 config.json
+/.idea
+/.idea/php.xml
+/.idea/vcs.xml
