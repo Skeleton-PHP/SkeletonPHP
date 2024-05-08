@@ -1,10 +1,15 @@
 <?php
 namespace SkeletonPHP\Templates;
+/**
+ * @property string cachedPath
+ * @property bool cacheEnabled
+ * @property array blocks
+ */
 class Template {
 
-    public $blocks = array();
-    public $cachedPath = 'cache/';
-    public $cacheEnabled = false;
+    private $blocks = array();
+    private $cachedPath = 'cache/';
+    private $cacheEnabled = false;
 
     public function view($file, $data = array()) {
 		$cached_file = self::cache($file);
@@ -65,7 +70,8 @@ class Template {
     public function compileBlock($code) {
 		preg_match_all('/{% ?block ?(.*?) ?%}(.*?){% ?endblock ?%}/is', $code, $matches, PREG_SET_ORDER);
 		foreach ($matches as $value) {
-			if (!array_key_exists($value[1], self::$blocks)) self::$blocks[$value[1]] = '';
+
+		if (!array_key_exists($value[1], self::$blocks)) self::$blocks[$value[1]] = '';
 			if (strpos($value[2], '@parent') === false) {
 				self::$blocks[$value[1]] = $value[2];
 			} else {
@@ -73,6 +79,7 @@ class Template {
 			}
 			$code = str_replace($value[0], '', $code);
 		}
+
 		return $code;
 	}
 
