@@ -3,8 +3,8 @@ namespace SkeletonPHP\Templates;
 class Template {
 
     public $blocks = array();
-    public $cache_path = 'cache/';
-    public $cache_enabled = false;
+    public $cachedPath = 'cache/';
+    public $cacheEnabled = false;
 
     public function view($file, $data = array()) {
 		$cached_file = self::cache($file);
@@ -13,11 +13,11 @@ class Template {
 	}
 
     public function cache($file) {
-		if (!file_exists(self::$cache_path)) {
-		  	mkdir(self::$cache_path, 0744);
+		if (!file_exists(self::$cachedPath)) {
+		  	mkdir(self::$cachedPath, 0744);
 		}
-	    $cached_file = self::$cache_path . str_replace(array('/', '.html'), array('_', ''), $file . '.php');
-	    if (!self::$cache_enabled || !file_exists($cached_file) || filemtime($cached_file) < filemtime($file)) {
+	    $cached_file = self::$cachedPath . str_replace(array('/', '.html'), array('_', ''), $file . '.php');
+	    if (!self::$cacheEnabled || !file_exists($cached_file) || filemtime($cached_file) < filemtime($file)) {
 			$code = self::includeFiles($file);
 			$code = self::compileCode($code);
 	        file_put_contents($cached_file, '<?php class_exists(\'' . __CLASS__ . '\') or exit; ?>' . PHP_EOL . $code);
@@ -26,7 +26,7 @@ class Template {
 	}
 
 	public function clearCache() {
-		foreach(glob(self::$cache_path . '*') as $file) {
+		foreach(glob(self::$cachedPath . '*') as $file) {
 			unlink($file);
 		}
 	}
