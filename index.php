@@ -3,6 +3,7 @@
 namespace SkeletonPHP;
 
 use SkeletonPHP\AutoLoader;
+require_once __DIR__ . './vendor/autoload.php';
 //require('Database/db.php');
 session_start();
 if (isset($_SESSION['username'])) {
@@ -111,7 +112,7 @@ if (isset($_SESSION['username'])) {
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		</div>
+
 	</footer>
 
 </body>

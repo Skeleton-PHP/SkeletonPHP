@@ -35,8 +35,7 @@ class Config implements ConfigStub{
     public function retrieveSetting($fetch)
     {
         if (!file_exists("config.json")) {
-            die("Error");"
-            exit;
+            die("Error");
         } else {
             $string = file_get_contents('config.json');
             $jsonIterator = new RecursiveIteratorIterator(
