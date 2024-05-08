@@ -10,6 +10,6 @@
         "recovery_email" :  ""
     },
   "Settings": {
-    "debug_mode": "1",
+    "debug_mode": "1"
   }
 }
