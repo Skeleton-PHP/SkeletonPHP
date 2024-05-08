@@ -3,7 +3,7 @@
 namespace SkeletonPHP;
 
 use SkeletonPHP\AutoLoader;
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . './vendor/autoload.php';
 //require('Database/db.php');
 session_start();
 if (isset($_SESSION['username'])) {
