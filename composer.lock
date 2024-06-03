@@ -4,27 +4,143 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "888b9daf0f3a6c0988a26f2ade85c767",
+    "content-hash": "8b6a09958f81ce290b348c0352feed6a",
     "packages": [
         {
-            "name": "vertanzil/sql-builder",
+            "name": "nikic/fast-route",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vertanzil/SQLBuilder.git",
-                "reference": "e184146147ee38cd0e2ca85a9fc39e64a54abdb7"
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "d3ada013d0f683ad2a8d0614fc97917a6ab72ce9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vertanzil/SQLBuilder/zipball/e184146147ee38cd0e2ca85a9fc39e64a54abdb7",
-                "reference": "e184146147ee38cd0e2ca85a9fc39e64a54abdb7",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/d3ada013d0f683ad2a8d0614fc97917a6ab72ce9",
+                "reference": "d3ada013d0f683ad2a8d0614fc97917a6ab72ce9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1.0",
+                "psr/simple-cache": "^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "lcobucci/coding-standard": "^11.0",
+                "phpbench/phpbench": "^1.2",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.3",
+                "phpstan/phpstan-strict-rules": "^1.5",
+                "phpunit/phpunit": "^10.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/nikic/FastRoute/issues",
+                "source": "https://github.com/nikic/FastRoute/tree/2.0.0-beta1"
+            },
+            "time": "2024-03-04T23:46:43+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "2d280c2aaa23a120f35d55cfde8581954a8e77fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/2d280c2aaa23a120f35d55cfde8581954a8e77fa",
+                "reference": "2d280c2aaa23a120f35d55cfde8581954a8e77fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/simple-cache/tree/master"
+            },
+            "time": "2022-04-08T16:41:45+00:00"
+        },
+        {
+            "name": "skeleton-php/query-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder.git",
+                "reference": "a296395e5e855932d0867b91d5ccb057d0e21b37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Skeleton-PHP/Skeleton-Query-Builder/zipball/a296395e5e855932d0867b91d5ccb057d0e21b37",
+                "reference": "a296395e5e855932d0867b91d5ccb057d0e21b37",
                 "shasum": ""
             },
             "default-branch": true,
             "type": "component",
             "autoload": {
                 "psr-4": {
-                    "Vertanzil\\SqlBuilder\\": "src/"
+                    "SkeletonPHP\\SqlBuilder\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -37,19 +153,20 @@
                     "email": "73062855+vertanzil@users.noreply.github.com"
                 }
             ],
-            "description": "SQL builder for php",
+            "description": "Mysql Builder for skeleton PHP",
             "support": {
-                "issues": "https://github.com/vertanzil/SQLBuilder/issues",
-                "source": "https://github.com/vertanzil/SQLBuilder/tree/master"
+                "issues": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder/issues",
+                "source": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder/tree/master"
             },
-            "time": "2024-05-05T07:07:57+00:00"
+            "time": "2024-06-03T18:07:27+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "vertanzil/sql-builder": 20
+        "skeleton-php/query-builder": 20,
+        "nikic/fast-route": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
