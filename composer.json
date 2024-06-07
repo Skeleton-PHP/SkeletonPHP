@@ -17,6 +17,6 @@
     "minimum-stability": "dev",
     "require": {
         "skeleton-php/query-builder": "dev-master",
-        "nikic/fast-route": "^2.0@dev"
+        "bramus/router": "~1.6"
     }
 }
