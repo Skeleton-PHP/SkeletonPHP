@@ -16,6 +16,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "vertanzil/sql-builder": "dev-master"
+        "skeleton-php/query-builder": "dev-master",
+        "bramus/router": "~1.6"
     }
 }

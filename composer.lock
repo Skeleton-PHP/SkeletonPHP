@@ -4,27 +4,78 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "888b9daf0f3a6c0988a26f2ade85c767",
+    "content-hash": "47240f2475fac15491fdc663c834b8c3",
     "packages": [
         {
-            "name": "vertanzil/sql-builder",
-            "version": "dev-master",
+            "name": "bramus/router",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vertanzil/SQLBuilder.git",
-                "reference": "e184146147ee38cd0e2ca85a9fc39e64a54abdb7"
+                "url": "https://github.com/bramus/router.git",
+                "reference": "55657b76da8a0a509250fb55b9dd24e1aa237eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vertanzil/SQLBuilder/zipball/e184146147ee38cd0e2ca85a9fc39e64a54abdb7",
-                "reference": "e184146147ee38cd0e2ca85a9fc39e64a54abdb7",
+                "url": "https://api.github.com/repos/bramus/router/zipball/55657b76da8a0a509250fb55b9dd24e1aa237eba",
+                "reference": "55657b76da8a0a509250fb55b9dd24e1aa237eba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.14",
+                "phpunit/php-code-coverage": "~2.0",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bramus": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bram(us) Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "http://www.bram.us"
+                }
+            ],
+            "description": "A lightweight and simple object oriented PHP Router",
+            "homepage": "https://github.com/bramus/router",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/bramus/router/issues",
+                "source": "https://github.com/bramus/router/tree/1.6.1"
+            },
+            "time": "2021-11-18T19:24:07+00:00"
+        },
+        {
+            "name": "skeleton-php/query-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder.git",
+                "reference": "a296395e5e855932d0867b91d5ccb057d0e21b37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Skeleton-PHP/Skeleton-Query-Builder/zipball/a296395e5e855932d0867b91d5ccb057d0e21b37",
+                "reference": "a296395e5e855932d0867b91d5ccb057d0e21b37",
                 "shasum": ""
             },
             "default-branch": true,
             "type": "component",
             "autoload": {
                 "psr-4": {
-                    "Vertanzil\\SqlBuilder\\": "src/"
+                    "SkeletonPHP\\SqlBuilder\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -37,19 +88,19 @@
                     "email": "73062855+vertanzil@users.noreply.github.com"
                 }
             ],
-            "description": "SQL builder for php",
+            "description": "Mysql Builder for skeleton PHP",
             "support": {
-                "issues": "https://github.com/vertanzil/SQLBuilder/issues",
-                "source": "https://github.com/vertanzil/SQLBuilder/tree/master"
+                "issues": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder/issues",
+                "source": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder/tree/master"
             },
-            "time": "2024-05-05T07:07:57+00:00"
+            "time": "2024-06-03T18:07:27+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "vertanzil/sql-builder": 20
+        "skeleton-php/query-builder": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
