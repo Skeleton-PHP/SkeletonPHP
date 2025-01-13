@@ -56,9 +56,6 @@ SkeletonPHP
 	│   ├── db.php
 	├── pages
 	│   ├── dashboard.php
-  │   ├── login.php
-  │   ├── logout.php
-  │   ├── register.php
 	├── public
 	│   ├── index.php
 	├── templates
