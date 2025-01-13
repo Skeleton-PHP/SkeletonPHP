@@ -42,9 +42,11 @@ SkeletonPHP
 	├── composer.json
 	├── composer.lock
 	├── .gitignore
+	├── .htaccess
 	├── example.config.json (Will need to be renamed to config.json)
 	├── README.md
 	├── LICENSE.md
+	├── Logo.png
   ├── index.php
   ├── style.css
 	├── assets
@@ -56,9 +58,6 @@ SkeletonPHP
 	│   ├── db.php
 	├── pages
 	│   ├── dashboard.php
-  │   ├── login.php
-  │   ├── logout.php
-  │   ├── register.php
 	├── public
 	│   ├── index.php
 	├── templates
@@ -66,7 +65,10 @@ SkeletonPHP
   │   ├── header.php
   │   ├── index.php
 	├── vendor
+	│   ├── bramus
 	│   ├── composter
+	│   ├── skeleton-php
+	│   ├── autoload.php
   │     ├── autoload_classmap.php
   │     ├── autoload_namespaces.php
   │     ├── autoload_psr4.php
@@ -81,8 +83,8 @@ SkeletonPHP
   │     ├── sql-builder
 	│   ├── autoloader.php
   └── 
-```
 
+```
 ### Tools Required
 
 All tools required go here. You would require the following tools to develop and run the project:
