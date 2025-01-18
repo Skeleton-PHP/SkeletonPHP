@@ -8,7 +8,7 @@ $router = new \Bramus\Router\Router();
 
 
 $router->get('/', function() {
-    echo 'Home Page Contents';
+    include_once ('');
 });
 $router->get('/about', function() {
     echo 'About Page Contents';
