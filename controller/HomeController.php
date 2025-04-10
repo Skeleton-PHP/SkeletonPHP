@@ -8,6 +8,8 @@ class ResumeController extends Controller{
 //Logic for parsing information once its collected from the db
     public static function index()
     {
-
+        //controller code goes here FOR HANDLING INFORMATION FROM THE MODEL.
     }
 }
+
+

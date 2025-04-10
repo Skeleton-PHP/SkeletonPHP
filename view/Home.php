@@ -1,6 +1,6 @@
 <?php
 namespace SkeletonPHP\view;
-
+//HANDLES THE INFORMATION WHEN RETURNED
 class Home {
     /**
      * Render the home page view.

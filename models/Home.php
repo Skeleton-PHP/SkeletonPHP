@@ -3,6 +3,8 @@ namespace Skeleton\Models;
 
 use Cv\Db;
 
+//THIS HANDLES ALL THE DATABASE QUERIES ANDPULLS INFORMATION FROM MYSQL ETC.
+
 class Resume{
 
         //class forpulling data from the database.

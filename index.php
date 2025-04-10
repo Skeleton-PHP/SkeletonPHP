@@ -2,6 +2,7 @@
 namespace SkeletonPHP;
 
 use SkeletonPHP\view\Home;
+use SkeletonPHP\view\ResumeView;
 use SkeletonPHP\view\About;
 
 require_once __DIR__ . '/vendor/autoload.php';
