@@ -39,50 +39,50 @@ Other details that need to be given while starting out with the project can be p
 ```
 SkeletonPHP
 	├── 
-	├── composer.json
-	├── composer.lock
 	├── .gitignore
 	├── .htaccess
+	├── composer.json
+	├── composer.lock
+	├── controller.php
 	├── example.config.json (Will need to be renamed to config.json)
-	├── README.md
+    ├── index.php
 	├── LICENSE.md
 	├── Logo.png
-  ├── index.php
-  ├── style.css
-	├── assets
-	├── auth
-	│   ├── auth.php
-	├── config
-	│   ├── config.php
-	├── database
-	│   ├── db.php
-	├── pages
-	│   ├── dashboard.php
-	├── public
-	│   ├── index.php
-	├── templates
-	│   ├── footer.php
-  │   ├── header.php
-  │   ├── index.php
+	├── package-lock.json
+	├── composer.php
+	├── README.md
+	├── view
+	│   ├── About.php
+	│   ├── Home.php
 	├── vendor
 	│   ├── bramus
 	│   ├── composter
 	│   ├── skeleton-php
 	│   ├── autoload.php
-  │     ├── autoload_classmap.php
-  │     ├── autoload_namespaces.php
-  │     ├── autoload_psr4.php
-  │     ├── autoload_real.php
-  │     ├── autoload_static.php
-  │     ├── ClassLoader.php
-  │     ├── installed.json
-  │     ├── installed.php
-  │     ├── InstalledVersions.php
-  │     ├── LICENSE
-	│   ├── vertanzil
-  │     ├── sql-builder
-	│   ├── autoloader.php
-  └── 
+    │   ├── autoload_classmap.php
+    │   ├── autoload_namespaces.php
+    │   ├── autoload_psr4.php
+    │   ├── autoload_real.php
+    │   ├── autoload_static.php
+    │   ├── ClassLoader.php
+    │   ├── installed.json
+    │   ├── installed.php
+    │   ├── InstalledVersions.php
+    │   ├── LICENSE
+    │   ├── vertanzil
+    │     ├── sql-builder
+    │     ├── autoloader.php
+	├── models
+	│   ├── Home.php
+	├── database
+	│   ├── db.php
+	├── controller
+	│   ├── HomeController.php
+	├── config
+	│   ├── config.php
+	├── authentication
+	│   ├── auth.php
+    └──
 
 ```
 ### Tools Required
