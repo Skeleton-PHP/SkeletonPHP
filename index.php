@@ -1,25 +1,32 @@
 <?php
 namespace SkeletonPHP;
 
-use SkeletonPHP\view\Home;
-use SkeletonPHP\view\ResumeView;
-use SkeletonPHP\view\About;
+use SkeletonPHP\Core\Container;
+use SkeletonPHP\Controllers\SampleController;
+use SkeletonPHP\Models\SampleModel;
+use SkeletonPHP\Views\HomeView;
 
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/controller.php';
+require_once __DIR__ . '/core/Container.php';
+
+// Create container and register dependencies using resolver closures
+$container = new Container();
+$container->set('SampleModel', function($c) {
+    return new SampleModel();
+});
+$container->set('HomeView', function($c) {
+    return new HomeView();
+});
+
+// Instantiate the SampleController with the container
+$sampleController = new SampleController($container);
 
 $router = new \Bramus\Router\Router();
 
-// Instantiate the Home view and define its route
-$homeView = new Home();
-$router->get('/', function() use ($homeView) {
-    echo $homeView->render();
-});
-
-// Optionally, instantiate the About view and define its route
-$aboutView = new About();
-$router->get('/about', function() use ($aboutView) {
-    echo $aboutView->render();
+// Define the route to use the controller's index method
+$router->get('/', function() use ($sampleController) {
+    echo $sampleController->index();
 });
 
 $router->run();
