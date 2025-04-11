@@ -51,9 +51,8 @@ SkeletonPHP
 	├── package-lock.json
 	├── composer.php
 	├── README.md
-	├── view
-	│   ├── About.php
-	│   ├── Home.php
+	├── views
+	│   ├── Homeview.php
 	├── vendor
 	│   ├── bramus
 	│   ├── composter
