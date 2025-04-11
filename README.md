@@ -51,9 +51,8 @@ SkeletonPHP
 	├── package-lock.json
 	├── composer.php
 	├── README.md
-	├── view
-	│   ├── About.php
-	│   ├── Home.php
+	├── views
+	│   ├── Homeview.php
 	├── vendor
 	│   ├── bramus
 	│   ├── composter
@@ -73,11 +72,11 @@ SkeletonPHP
     │     ├── sql-builder
     │     ├── autoloader.php
 	├── models
-	│   ├── Home.php
+	│   ├── SampleModel.php
 	├── database
 	│   ├── db.php
 	├── controller
-	│   ├── HomeController.php
+	│   ├── SampleController.php
 	├── config
 	│   ├── config.php
 	├── authentication

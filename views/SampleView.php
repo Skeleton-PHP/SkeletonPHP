@@ -1,7 +1,7 @@
 <?php
 namespace SkeletonPHP\Views;
 
-class HomeView {
+class SampleView {
     /**
      * Render the home page view.
      *

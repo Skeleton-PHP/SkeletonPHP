@@ -16,7 +16,7 @@ class SampleController {
          $data  = $model->sample_query();
 
          // Retrieve the HomeView instance and render the data
-         $view = $this->container->get('HomeView');
+         $view = $this->container->get('SampleView');
          return $view->render($data);
     }
 }
