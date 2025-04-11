@@ -73,11 +73,11 @@ SkeletonPHP
     │     ├── sql-builder
     │     ├── autoloader.php
 	├── models
-	│   ├── Home.php
+	│   ├── SampleModel.php
 	├── database
 	│   ├── db.php
 	├── controller
-	│   ├── HomeController.php
+	│   ├── SampleController.php
 	├── config
 	│   ├── config.php
 	├── authentication
