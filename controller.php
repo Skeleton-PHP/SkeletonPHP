@@ -4,7 +4,7 @@ namespace SkeletonPHP\Controllers;
 
 class Controller
 {
-    public static function view(object $data = null)
+    public static function view(?object $data = null)
     {
         include __DIR__.
             '/../Views/'.
