@@ -3,6 +3,7 @@ require_once __DIR__ . "/../vendor/autoload.php"; // Adjust path if not using Co
 
 use SkeletonPHP\Core\Container;
 use SkeletonPHP\Controllers\ResumeController;
+use SkeletonPHP\Controllers\SampleController;
 use SkeletonPHP\Models\SampleModel;
 use SkeletonPHP\Views\HomeView;
 
@@ -20,6 +21,6 @@ $container->set('HomeView', function($c) {
 });
 
 // Initialize the ResumeController with the container and call the index method
-$controller = new ResumeController($container);
+$controller = new SampleController($container);
 $controller->index();
 ?>
