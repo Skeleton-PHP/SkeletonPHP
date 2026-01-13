@@ -23,21 +23,26 @@ $handler->register();
 
 
 
+
 // Create container and register dependencies using resolver closures
 $container = new Container();
-
+$sampleController = new SampleController($container);
+$router = new \Bramus\Router\Router();
 $container->set('SampleModel', function($c) {
     return new SampleModel();
 });
-
-// Register SampleView dependency
 $container->set('SampleView', function($c) {
     return new SampleView();
 });
+$router->get('/', function() use ($sampleController) {
+    echo $sampleController->index();
+});
 
-// Instantiate the SampleController with the container
-$sampleController = new SampleController($container);
-$router = new \Bramus\Router\Router();
+
+
+
+
+
 
 
 $router->set404(function () {
@@ -45,16 +50,5 @@ $router->set404(function () {
     echo '404 - Not Found';
 });
 
-// Define the route to use the controller's index method
-$router->get('/', function() use ($sampleController) {
-    echo $sampleController->index();
-});
-
-$router->get('/about', function() use ($sampleController) {
-    echo $sampleController->index();
-});
-
 $router->run();
-
-
 ?>
