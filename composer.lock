@@ -63,19 +63,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder.git",
-                "reference": "a296395e5e855932d0867b91d5ccb057d0e21b37"
+                "reference": "8fb6ce16af4d4352b14e3f066b6e20073ac40ac0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Skeleton-PHP/Skeleton-Query-Builder/zipball/a296395e5e855932d0867b91d5ccb057d0e21b37",
-                "reference": "a296395e5e855932d0867b91d5ccb057d0e21b37",
+                "url": "https://api.github.com/repos/Skeleton-PHP/Skeleton-Query-Builder/zipball/8fb6ce16af4d4352b14e3f066b6e20073ac40ac0",
+                "reference": "8fb6ce16af4d4352b14e3f066b6e20073ac40ac0",
                 "shasum": ""
             },
             "default-branch": true,
             "type": "component",
             "autoload": {
                 "psr-4": {
-                    "SkeletonPHP\\SqlBuilder\\": "src/"
+                    "SkeletonPHP\\SqlBuilder\\": "/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -85,7 +85,8 @@
             "authors": [
                 {
                     "name": "Kyle Smith",
-                    "email": "73062855+vertanzil@users.noreply.github.com"
+                    "email": "73062855+vertanzil@users.noreply.github.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Mysql Builder for skeleton PHP",
@@ -93,7 +94,7 @@
                 "issues": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder/issues",
                 "source": "https://github.com/Skeleton-PHP/Skeleton-Query-Builder/tree/master"
             },
-            "time": "2024-06-03T18:07:27+00:00"
+            "time": "2025-05-07T19:17:32+00:00"
         }
     ],
     "packages-dev": [],
@@ -104,7 +105,7 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
