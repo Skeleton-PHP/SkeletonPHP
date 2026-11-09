@@ -1,20 +1,54 @@
 <?php
+
+declare(strict_types=1);
+
 namespace SkeletonPHP\Core;
 
-class Container {
-    protected $instances = [];
+use Closure;
+use InvalidArgumentException;
 
-    // Register a resolver callable for a name
-    public function set($name, callable $resolver) {
-        $this->instances[$name] = $resolver;
+final class Container
+{
+    /** @var array<string, Closure(Container): mixed> */
+    private array $bindings = [];
+
+    /** @var array<string, mixed> */
+    private array $instances = [];
+
+    public function set(string $name, callable $resolver): void
+    {
+        $this->bindings[$name] = $resolver;
+        unset($this->instances[$name]);
     }
 
-    // Get an instance by executing its resolver
-    public function get($name) {
-        if (isset($this->instances[$name])) {
-            return $this->instances[$name]($this);
+    public function singleton(string $name, callable $resolver): void
+    {
+        $this->bindings[$name] = static function (Container $container) use ($resolver, $name) {
+            if (!array_key_exists($name, $container->instances)) {
+                $container->instances[$name] = $resolver($container);
+            }
+
+            return $container->instances[$name];
+        };
+    }
+
+    public function has(string $name): bool
+    {
+        return array_key_exists($name, $this->bindings);
+    }
+
+    public function get(string $name): mixed
+    {
+        if (!array_key_exists($name, $this->bindings)) {
+            throw new InvalidArgumentException(sprintf('No registered instance for "%s".', $name));
         }
-        throw new \Exception("No registered instance for " . $name);
+
+        $resolver = $this->bindings[$name];
+
+        if ($resolver instanceof Closure) {
+            return $resolver($this);
+        }
+
+        return $resolver;
     }
 }
-?>

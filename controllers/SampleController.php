@@ -1,23 +1,24 @@
 <?php
+
+declare(strict_types=1);
+
 namespace SkeletonPHP\Controllers;
 
 use SkeletonPHP\Core\Container;
 
-class SampleController {
-    protected $container;
-
-    public function __construct(Container $container) {
-         $this->container = $container;
+final class SampleController
+{
+    public function __construct(private Container $container)
+    {
     }
 
-    public function index() {
-         // Retrieve the SampleModel instance from the container
-         $model = $this->container->get('SampleModel');
-         $data  = $model->sample_query();
+    public function index(): string
+    {
+        $model = $this->container->get('SampleModel');
+        $data = $model->getProfile();
 
-         // Retrieve the HomeView instance and render the data
-         $view = $this->container->get('SampleView');
-         return $view->render($data);
+        $view = $this->container->get('SampleView');
+
+        return $view->render($data);
     }
 }
-?>

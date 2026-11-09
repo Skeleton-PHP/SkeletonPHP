@@ -1,35 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SkeletonPHP\Controllers;
 
-class Controller
+abstract class Controller
 {
-    public static function view(?object $data = null)
+    protected function renderView(string $view, array $data = []): string
     {
-        include __DIR__.
-            '/../Views/'.
-            self::path().
-            '/'.
-            self::file();
-    }
+        extract($data, EXTR_SKIP);
+        ob_start();
+        include __DIR__ . '/views/' . $view . '.php';
 
-    private static function path() : string
-    {
-        return str_replace(
-            'Controller.php',
-            '',
-            end(
-                explode(
-                    '/',
-                    debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2)[1]['file']
-                )
-            )
-        );
-    }
-
-    private static function file() : string
-    {
-        return debug_backtrace(
-            DEBUG_BACKTRACE_IGNORE_ARGS, 3)[2]['function'].'.php';
+        return (string) ob_get_clean();
     }
 }

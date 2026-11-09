@@ -1,14 +1,22 @@
 <?php
+
+declare(strict_types=1);
+
 namespace SkeletonPHP\Models;
 
-class SampleModel {
-    // This method emulates a data query.
-    public function sample_query() {
-         return [
-             'name'  => 'John Doe',
-             'email' => 'johndoe@example.com',
-             'bio'   => 'Software developer with 10 years of experience.'
-         ];
+final class SampleModel
+{
+    /**
+     * Return sample profile data for demonstration purposes.
+     *
+     * @return array<int, array{name: string, value: string}>
+     */
+    public function getProfile(): array
+    {
+        return [
+            ['name' => 'Name', 'value' => 'John Doe'],
+            ['name' => 'Email', 'value' => 'johndoe@example.com'],
+            ['name' => 'Bio', 'value' => 'Software developer with 10 years of experience.'],
+        ];
     }
 }
-?>

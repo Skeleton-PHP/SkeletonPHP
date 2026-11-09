@@ -1,15 +1,17 @@
 {
     "name": "skeleton-php/skeletonphp",
-    "description": "Small php based framework",
+    "description": "A lightweight PHP framework skeleton with simple MVC conventions.",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
+            "SkeletonPHP\\": "./",
             "SkeletonPHP\\Core\\": "core/",
+            "SkeletonPHP\\Config\\": "config/",
+            "SkeletonPHP\\Database\\": "database/",
             "SkeletonPHP\\Controllers\\": "controllers/",
             "SkeletonPHP\\Models\\": "models/",
-            "SkeletonPHP\\Views\\": "views/",
-            "SkeletonPHP\\": "./"
+            "SkeletonPHP\\Views\\": "views/"
         }
     },
     "authors": [

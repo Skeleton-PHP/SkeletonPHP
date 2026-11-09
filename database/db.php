@@ -1,93 +1,111 @@
-
 <?php
+declare(strict_types=1);
 
-namespace SkeletonPHP\Database\Connection;
+namespace SkeletonPHP\Database;
 
-use SkeletonPHP\classes\Config\Config;
-use Exception;
+use mysqli;
+use mysqli_sql_exception;
+use RuntimeException;
+use SkeletonPHP\Config\Config;
 
-class DBConnection
+final class Database
 {
-    // Hold the single instance of DBConnection
-    private static $instance = null;
+    private static ?self $instance = null;
 
-    // MySQLi connection resource
-    private $conn;
+    private ?mysqli $connection = null;
 
-    /**
-     * Private constructor to prevent direct instantiation.
-     *
-     * @throws Exception If the connection cannot be established.
-     */
-    private function __construct()
+    private function __construct(array $settings = [])
     {
-        $config = new Config();
-        $servername = $config->getHost();
-        $username   = $config->getUsername();
-        $password   = $config->getPassword();
-        $dbname     = $config->getDatabase();
+        $config = $settings ?: (new Config())->database();
 
-        $this->conn = mysqli_connect($servername, $username, $password, $dbname);
+        $host = $config['host'] ?? '127.0.0.1';
+        $username = $config['username'] ?? 'root';
+        $password = $config['password'] ?? '';
+        $database = $config['database'] ?? 'skeletonphp';
 
-        if (!$this->conn) {
-            $errorMessage = "Database connection failed: " . mysqli_connect_error();
-            error_log($errorMessage);
-            throw new Exception("Database connection failed. Please contact support.");
+        $this->connection = @mysqli_connect($host, $username, $password, $database);
+
+        if ($this->connection === false || mysqli_connect_errno() !== 0) {
+            throw new RuntimeException('Database connection failed: ' . mysqli_connect_error());
         }
     }
 
-    /**
-     * Returns the singleton instance of DBConnection.
-     *
-     * @return DBConnection
-     */
-    public static function getInstance(): DBConnection
+    public static function getInstance(?Config $config = null): self
     {
         if (self::$instance === null) {
-            self::$instance = new DBConnection();
+            self::$instance = new self($config ? $config->database() : []);
         }
+
         return self::$instance;
     }
 
-    /**
-     * Returns the active MySQLi connection.
-     *
-     * @return \mysqli
-     */
-    public function getConnection(): \mysqli
+    public function connection(): mysqli
     {
-        return $this->conn;
+        return $this->connection;
     }
 
-    /**
-     * Execute a SELECT query and return the result set as an array.
-     *
-     * @param string $query The SELECT query to be executed.
-     * @return array Array of result rows.
-     * @throws Exception If the query execution fails.
-     */
-    public function runSelectQuery(string $query): array
+    public function fetchAll(string $query, array $params = []): array
     {
-        $result = mysqli_query($this->conn, $query);
-        if (!$result) {
-            $errorMessage = "Query failed: " . mysqli_error($this->conn);
-            error_log($errorMessage);
-            throw new Exception("Query execution failed. Please contact support.");
-        }
-        // Fetch all rows as associative arrays
-        $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        mysqli_free_result($result);
+        $statement = $this->prepare($query, $params);
+        $result = $statement->get_result();
+        $rows = $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
+        $statement->close();
+
         return $rows;
     }
 
-    /**
-     * Close the database connection when the instance is destroyed.
-     */
-    public function __destruct()
+    public function fetchOne(string $query, array $params = []): ?array
     {
-        if ($this->conn) {
-            mysqli_close($this->conn);
+        $rows = $this->fetchAll($query, $params);
+        return $rows[0] ?? null;
+    }
+
+    public function execute(string $query, array $params = []): bool
+    {
+        $statement = $this->prepare($query, $params);
+        $success = $statement->execute();
+        $statement->close();
+
+        return $success;
+    }
+
+    public function close(): void
+    {
+        if ($this->connection instanceof mysqli) {
+            $this->connection->close();
+            $this->connection = null;
         }
     }
+
+    private function prepare(string $query, array $params = []): \mysqli_stmt
+    {
+        $statement = $this->connection->prepare($query);
+        if ($statement === false) {
+            throw new RuntimeException('Unable to prepare query: ' . $this->connection->error);
+        }
+
+        if ($params !== []) {
+            $types = '';
+            $values = [];
+
+            foreach ($params as $value) {
+                if (is_int($value)) {
+                    $types .= 'i';
+                } elseif (is_float($value)) {
+                    $types .= 'd';
+                } elseif (is_string($value)) {
+                    $types .= 's';
+                } else {
+                    $types .= 'b';
+                }
+
+                $values[] = $value;
+            }
+
+            $statement->bind_param($types, ...$values);
+        }
+
+        return $statement;
+    }
 }
-?>
+

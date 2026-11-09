@@ -1,8 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SkeletonPHP\Users\Authentication;
 
-session_start();
-if (!isset($_SESSION['username'])) {
-	header("Location:login.php");
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (empty($_SESSION['username'])) {
+    header('Location: /login.php');
+    exit;
 }

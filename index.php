@@ -1,57 +1,46 @@
 <?php
-namespace SkeletonPHP;
 
-use SkeletonPHP\Core\Container;
+declare(strict_types=1);
+
+use Bramus\Router\Router;
+use SkeletonPHP\Config\Config;
 use SkeletonPHP\Controllers\SampleController;
+use SkeletonPHP\Core\Container;
+use SkeletonPHP\Core\ErrorHandler;
 use SkeletonPHP\Models\SampleModel;
 use SkeletonPHP\Views\SampleView;
-use SkeletonPHP\Core\ErrorHandler;
-use Dotenv\Exception;
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/controller.php';
-<<<<<<< HEAD
-=======
+require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/core/Container.php';
-
-
-
-
+require_once __DIR__ . '/core/ErrorHandler.php';
+require_once __DIR__ . '/controllers/SampleController.php';
+require_once __DIR__ . '/models/SampleModel.php';
+require_once __DIR__ . '/views/SampleView.php';
 
 $debug = filter_var($_ENV['APP_DEBUG'] ?? $_SERVER['APP_DEBUG'] ?? true, FILTER_VALIDATE_BOOLEAN);
-$handler = new ErrorHandler($debug);
-$handler->register();
+(new ErrorHandler((bool) $debug))->register();
 
+$configPath = __DIR__ . '/config.json';
+if (!is_file($configPath)) {
+    $configPath = __DIR__ . '/example.config.json';
+}
 
-
-
-
-// Create container and register dependencies using resolver closures
+$appConfig = Config::fromFile($configPath);
 $container = new Container();
+$container->singleton('SampleModel', static fn () => new SampleModel());
+$container->singleton('SampleView', static fn () => new SampleView());
+
 $sampleController = new SampleController($container);
->>>>>>> 5e7d4150ef72ef73bc636e370ec619b967f40167
-$router = new \Bramus\Router\Router();
-$container->set('SampleModel', function($c) {
-    return new SampleModel();
-});
-$container->set('SampleView', function($c) {
-    return new SampleView();
-});
-$router->get('/', function() use ($sampleController) {
+$router = new Router();
+
+$router->get('/', static function () use ($sampleController) {
     echo $sampleController->index();
 });
 
-
-
-
-
-
-
-
-$router->set404(function () {
-    header('HTTP/1.1 404 Not Found');
-    echo '404 - Not Found';
+$router->set404(static function () {
+    http_response_code(404);
+    echo '<h1>404 - Not Found</h1>';
 });
 
 $router->run();
-?>
