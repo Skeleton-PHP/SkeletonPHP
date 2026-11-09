@@ -5,6 +5,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
+            "SkeletonPHP\\Core\\": "core/",
+            "SkeletonPHP\\Controllers\\": "controllers/",
+            "SkeletonPHP\\Models\\": "models/",
+            "SkeletonPHP\\Views\\": "views/",
             "SkeletonPHP\\": "./"
         }
     },

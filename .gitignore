@@ -5,3 +5,4 @@ config.json
 /.idea/vcs.xml
 /templates/cache
 /UnusedCode
+.qodo
